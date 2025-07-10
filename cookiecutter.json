@@ -1,0 +1,8 @@
+{
+  "groupId": "com.prema",
+  "artifactId": "my-java-lib",
+  "javaVersion": "17",
+  "enable_sonarqube": "yes",
+  "enable_checkmarx": "no",
+  "enable_owasp": "yes"
+}
