@@ -1,0 +1,15 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    uses: your-org/workflows/.github/workflows/maven-lib.yml@v1
+    with:
+      java-version: '{{ cookiecutter.javaVersion }}'
+      enable-sonarqube: {{ 'true' if cookiecutter.enable_sonarqube == 'yes' else 'false' }}
+      enable-checkmarx: {{ 'true' if cookiecutter.enable_checkmarx == 'yes' else 'false' }}
+      enable-owasp: {{ 'true' if cookiecutter.enable_owasp == 'yes' else 'false' }}
